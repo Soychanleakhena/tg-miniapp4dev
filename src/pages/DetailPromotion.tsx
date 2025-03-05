@@ -15,15 +15,33 @@ const Detail: React.FC = () => {
       ></div>
 
       <div className="relative z-20 flex flex-col min-h-screen w-full">
-        <header className="flex justify-between items-center p-6 w-full bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+      <header className="flex justify-between items-center p-4 w-full bg-white shadow-md fixed top-0 left-0 right-0 z-50">
           <button
             className="text-[#9747FF] z-50"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
-            {isMenuOpen ? <FaTimes size={30} /> : <FaBars size={30} />}
+            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
-          <h1 className="text-2xl font-bold text-gray-900">Exclusive Promotion</h1>
+          <div className="rounded-full border-2 border-[#9747FF] p-1">
+            <div className="rounded-full bg-[#9747FF] p-2">
+              <svg
+                className="w-5 h-5 text-white"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M6.5 7H5C3.89543 7 3 7.89543 3 9V11C3 12.1046 3.89543 13 5 13H6.5M6.5 7V13M6.5 7H17.5M17.5 7H19C20.1046 7 21 7.89543 21 9V11C21 12.1046 20.1046 20.1046 21 19 13H17.5M17.5 7V13M17.5 13H6.5"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
         </header>
+
 
         <div
           className={`fixed top-0 left-0 w-64 h-full bg-white shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
