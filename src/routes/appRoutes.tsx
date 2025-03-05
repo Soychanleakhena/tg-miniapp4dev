@@ -3,6 +3,7 @@ import { createBrowserRouter } from "react-router-dom";
 import ProfilePage from "../pages/ProfilePage";
 import Layout from "../pages/Layout";
 import MembershipPlan from "../pages/membershipPlan";
+import Checkout from "../pages/membershipInfo";
 
 export interface AppRoute {
   path?: string;
@@ -13,7 +14,8 @@ export interface AppRoute {
 
 export const webRoutes = {
   home: "/",
-  membership: "/membership"
+  membership: "/membership",
+  membershipInfo: "/membership-info"
   // discover: "/discover",
 };
 
@@ -30,6 +32,7 @@ const appRoutes: AppRoute[] = [
     children: [
       { path: webRoutes.home, element: <ProfilePage /> },
       { path: webRoutes.membership, element: <MembershipPlan /> },
+      { path: webRoutes.membershipInfo, element: <Checkout /> },
       // { path: webRoutes.discover, element: <DiscoverPage /> },
     ],
   },
